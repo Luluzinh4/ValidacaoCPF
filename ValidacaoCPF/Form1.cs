@@ -21,9 +21,9 @@ namespace ValidacaoCPF
         {
             string cpf = txtCpf.Text;
 
-            if(cpf.Length != 11)
+            if(cpf.Trim().Length != 11)
             {
-                MessageBox.Show("Insira um valor com 11 dígitos", "Problema!",
+                MessageBox.Show("Insira um valor com 11 dígitos sem espaços", "Problema!",
                     MessageBoxButtons.OK);
                 txtCpf.Focus();
                 return;
@@ -49,7 +49,7 @@ namespace ValidacaoCPF
 
             if (!isNumeric)
             {
-                MessageBox.Show("Insira um valor numérico", "Problema!",
+                MessageBox.Show("Insira um valor numérico sem espaço em branco", "Problema!",
                     MessageBoxButtons.OK);
                 txtCpf.Focus();
                 return;
